@@ -9,6 +9,20 @@ Time::Time(float hours, float minutes, float seconds)
 	simplifyTime();
 }
 
+Time& Time::operator+=(const Time& t)
+{
+	_hours += t._hours;
+	_minutes += t._minutes;
+	_seconds += t._seconds;
+	simplifyTime();
+	return *this;
+}
+
+Time operator+(Time t1, Time t2)
+{
+	return t1 += t2;
+}
+
 void Time::simplifySeconds()
 {
 	if (_seconds >= 60)

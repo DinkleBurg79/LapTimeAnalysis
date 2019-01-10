@@ -6,6 +6,8 @@ class Time
 {
 public:
 	Time(float hours, float minutes, float seconds);
+
+	Time& operator+=(const Time& t);
 	
 	// Returns a string representation of Time for easy printing
 	std::string toString();
@@ -22,3 +24,7 @@ private:
 	// Simplifies Time by converting excess seconds into minutes, and converting excess minutes into hours
 	void simplifyTime();
 };
+
+//define operator+ outside of class because it doesn't require the objects representation
+
+Time operator+(Time t1, Time t2);
