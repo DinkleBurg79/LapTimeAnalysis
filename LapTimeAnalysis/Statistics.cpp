@@ -17,7 +17,7 @@ double Statistics::variancePopulation(const std::vector<double>& data)
 		sumOfSquaredDeviations += std::pow(x - mean, 2);
 	}
 
-	// since this population variance the sum of squared deviations are
-	// divided by the number of elements in the data
+	// since this is population variance, the sum of squared deviations are
+	// divided by the number of samples in the data
 	return sumOfSquaredDeviations / data.size();
 }

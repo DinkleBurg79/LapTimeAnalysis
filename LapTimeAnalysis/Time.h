@@ -15,7 +15,7 @@ public:
 private:
 	float _hours, _minutes, _seconds, _thousandthSeconds;
 
-	// Simplifies seconds by converted excess seconds into minutes and keeping the remaining seconds
+	// Simplifies seconds by converting excess seconds into minutes and keeping the remaining seconds
 	void simplifySeconds();
 
 	// Simplifies minutes by converting excess minutes into hours and keeping the remaining minutes
