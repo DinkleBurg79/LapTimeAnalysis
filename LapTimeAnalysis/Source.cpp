@@ -12,8 +12,8 @@ int main()
 
 	auto start = chrono::system_clock::now();
 
-	Time t{ 2.00f, 420.00f, 500.00f };
-	Time t2{ 1.00f, 10.00f, 30.00f };
+	Time t{ 2, 420, 500 };
+	Time t2{ 1, 10, 30 };
 	cout << "Time 1: " << t.toString() << "\n"; // should output 9.00:8.00:20.00
 	cout << "Time 2: " << t2.toString() << "\n"; // should output 1.00:10.00:30.00
 	//cout << "Sum of Time 1 and 2: " << (t += t2).toString() << "\n";
@@ -25,8 +25,8 @@ int main()
 	cout << "Time elapsed: " << timeElapsed.count() << "s" << "\n\n";
 	
 	start = chrono::system_clock::now();
-	Time t3{ 2.00f, 0.00f, 0.00f };
-	Time t4{ 0.00f, -30.00f, 0.00f };
+	Time t3{ -2, -30, 180 };
+	Time t4{ 0, -30, 0 };
 	cout << "Time 3: " << t3.toString() << "\n";
 	cout << "Time 4: " << t4.toString() << "\n";
 	cout << "Sum of T3 and T4: " << (t3 + t4).toString() << "\n";
